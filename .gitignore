@@ -1,0 +1,7 @@
+node_modules
+build
+.idea
+.gulp
+marketing_cases-DISIGN
+dist
+package-lock.json

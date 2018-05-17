@@ -1,0 +1,292 @@
+@import "fonts"
+@import "vars"
+@import "libs"
+
+// MAIN SETTING PROJECT =======================================/
+// ============================================================/
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $red
+
+body input:required:valid,
+body textarea:required:valid
+	color: $green
+
+body
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+main
+	overflow-x: hidden
+
+ul,
+ol
+	list-style-type: none
+	padding: 0
+	margin: 0
+
+// COLORS CLASS PROJECT =======================================/
+// ============================================================/
+.dark
+	color: $dark
+
+.white
+	color: $white
+
+.gold
+	color: $gold
+
+.red
+	color: $red
+
+.green
+	color: $green
+
+.sea
+	color: $sea
+
+.blue
+	color: $action_color
+
+.grey
+	color: $grey
+
+.cian
+	color: $cian
+
+// TEXT SETTING ===============================================/
+// ============================================================/
+.uppercase
+	text-transform: uppercase
+
+.bold
+	font-family: $default-font
+	font-weight: 700
+
+.semibold
+	font-family: $default-font
+	font-weight: bold
+
+.right
+	text-align: right
+
+.left
+	text-align: left
+
+.text_center
+	text-align: center
+
+// TYPOGRAPHY =================================================/
+// ============================================================/
+.text
+	font-size: 17px
+	line-height: 28px
+	font-family: $default-font
+	color: $font-color
+	font-weight: 400
+	&.-small
+		font-size: 14px
+		font-weight: 400
+		color: $grey
+
+.title
+	@extend .text
+	font-size: 32px
+	line-height: 44px
+	color: $dark
+	&.-promo
+		@extend .text
+		font-size: 60px
+		line-height: 58px
+		color: $dark
+	&.-subtitle
+		font-family: $font-title
+		font-size: 24px
+		line-height: 28px
+		font-weight: 700
+		color: $dark
+	&.--enlarged
+		display: block
+		border-radius: 100px
+		width: 158px
+		height: 66px
+		background-color: $light-grey
+		text-align: center
+		padding:
+			top: 12px
+			right: 33px
+			left: 33px
+		font-family: $font-title
+		font-size: 26px
+		line-height: 44px
+		font-weight: 700
+	&.--small
+		font-family: $font-title
+		font-size: 17px
+		line-height: 28px
+		font-weight: 700
+		color: $font-color
+
+// LINKS ======================================================/
+// ============================================================/
+.link
+	@extend .text
+	font-size: 14px
+	letter-spacing: 1.4px
+	color: $accent
+	font-weight: 400
+	text-decoration: underline
+	text-decoration-color: $liver
+	transition: all 0.3s ease
+	&:hover
+		color: $action_color
+		text-decoration-color: $red
+
+// LISTS ======================================================/
+// ============================================================/
+.list
+	li
+		@extend .text
+		position: relative
+		list-style-type: none
+		padding-left: 17px
+		margin-bottom: 28px
+		&:last-child
+			margin-bottom: 26px
+		&::before
+			display: inline-block
+			position: absolute
+			content: ''
+			top: 10px
+			left: 0
+			width: 7px
+			height: 7px
+			background-color: $red
+			border-radius: 100%
+
+// BUTTONS ====================================================/
+// ============================================================/
+.btn
+	display: inline-block
+	font-family: $font-title
+	font-size: 18px
+	color: $accent
+	text-transform: uppercase
+	text-align: center
+	line-height: 100%
+	letter-spacing: 1.8px
+	padding:
+		top: 27px
+		right: 24px
+		left: 24px
+	height: 67px
+	width: 219px
+	background: url("../img/btn-border.png") no-repeat
+	transition: all 0.3s ease
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: $action_color
+		animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+		transform: translate3d(0, 0, 0)
+		backface-visibility: hidden
+		@keyframes shake
+			10%, 90%
+				transform: translate3d(-1px, 0, 0)
+			20%, 80%
+				transform: translate3d(2px, 0, 0)
+			30%, 50%, 70%
+				transform: translate3d(-4px, -1px, 0)
+			40%, 60%
+				transform: translate3d(4px, 1px, 0)
+	&:focus
+		color: $white
+		outline: none
+
+// ICON TITLES ================================================/
+// ============================================================/
+.comment
+	display: inline-block
+	position: relative
+	&::before
+		position: absolute
+		display: inline-block
+		content: ''
+		width: 32px
+		height: 30px
+		top: -28px
+		left: 0
+		background-image: url("../svg/comment.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+
+.asterisk
+	display: inline-block
+	position: relative
+	padding-left: 14px
+	&::before
+		position: absolute
+		display: inline-block
+		content: '*'
+		font-family: $default-font
+		top: 0
+		left: 0
+
+.bicycle
+	display: inline-block
+	position: relative
+	&::after
+		position: absolute
+		display: inline-block
+		content: ''
+		width: 32px
+		height: 30px
+		top: -5px
+		right: -50px
+		background-image: url("../svg/bicycle.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+
+// BLOCK SETTING ==============================================
+// ============================================================/
+.hidden
+	display: none
+
+.clearfix:before,
+.clearfix:after
+	content: " "
+	display: table
+
+.clearfix
+	clear: both
+
+.centering
+	margin: 0 auto
+
+.padding__section
+	padding: 60px 15px 80px
+
+.nopadding
+	padding: 0 !important
+	margin: 0 !important
+
+// SHADOW SETTING =============================================
+// ============================================================/
+.text_shdow
+	text-shadow: $text-shadow
+
+.box-shdow
+	box-shadow: $box-shadow
+
+// OTHER SETTINGS =============================================
+//=============================================================/
+.opacity-20
+	opacity: $opacity-20
+
+// MODAL POP-UPS WINDOW DIALOG ================================
+// ============================================================/
