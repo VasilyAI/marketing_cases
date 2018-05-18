@@ -88,6 +88,8 @@ ol
 	font-family: $default-font
 	color: $font-color
 	font-weight: 400
+	margin:
+		bottom: 18px
 	&.-small
 		font-size: 14px
 		font-weight: 400
@@ -98,6 +100,7 @@ ol
 	font-size: 32px
 	line-height: 44px
 	color: $dark
+	max-width: 100%
 	&.-promo
 		@extend .text
 		font-size: 60px
@@ -110,7 +113,9 @@ ol
 		line-height: 28px
 		font-weight: 700
 		color: $dark
-		padding-top: 60px
+		margin:
+			top: 20px
+			bottom: 30px
 	&.--enlarged
 		display: block
 		border-radius: 100px
@@ -126,6 +131,7 @@ ol
 		font-size: 26px
 		line-height: 44px
 		font-weight: 700
+		margin-top: 93px
 	&.--small
 		font-family: $font-title
 		font-size: 17px
@@ -157,9 +163,9 @@ ol
 		position: relative
 		list-style-type: none
 		padding-left: 17px
-		margin-bottom: 14px
+		margin-bottom: 12px
 		&:last-child
-			margin-bottom: 26px
+			margin-bottom: 0
 		&::before
 			display: inline-block
 			position: absolute
@@ -183,12 +189,12 @@ ol
 	line-height: 100%
 	letter-spacing: 1.8px
 	padding:
-		top: 27px
+		top: 21px
 		right: 24px
 		left: 24px
-	height: 67px
-	width: 219px
-	background: url("../img/btn-border.png") no-repeat
+	height: 58px
+	width: 174px
+	background-color: $red
 	transition: all 0.3s ease
 	text-decoration: none
 	&:hover
@@ -221,7 +227,7 @@ ol
 		content: ''
 		width: 32px
 		height: 30px
-		top: -28px
+		top: -36px
 		left: 0
 		background-image: url("../svg/comment.svg")
 		background-repeat: no-repeat
