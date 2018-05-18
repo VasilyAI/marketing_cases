@@ -82,6 +82,7 @@ ol
 // TYPOGRAPHY =================================================/
 // ============================================================/
 .text
+	max-width: 790px
 	font-size: 17px
 	line-height: 28px
 	font-family: $default-font
@@ -103,11 +104,13 @@ ol
 		line-height: 58px
 		color: $dark
 	&.-subtitle
+		max-width: 100%
 		font-family: $font-title
 		font-size: 24px
 		line-height: 28px
 		font-weight: 700
 		color: $dark
+		padding-top: 60px
 	&.--enlarged
 		display: block
 		border-radius: 100px
@@ -150,10 +153,11 @@ ol
 .list
 	li
 		@extend .text
+		max-width: 855px
 		position: relative
 		list-style-type: none
 		padding-left: 17px
-		margin-bottom: 28px
+		margin-bottom: 14px
 		&:last-child
 			margin-bottom: 26px
 		&::before
